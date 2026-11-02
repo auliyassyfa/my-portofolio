@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Navbar from "@/components/Navbar";
 import {
   profile,
   tools,
@@ -10,7 +11,7 @@ import {
   type TimelineItem,
 } from "@/lib/data";
 
-const nav = [
+const nav: [string, string][] = [
   ["Home", "#home"],
   ["Tools", "#tools"],
   ["Projects", "#projects"],
@@ -71,28 +72,12 @@ function Timeline({ items }: { items: TimelineItem[] }) {
 export default function Page() {
   return (
     <>
-      <header className="sticky top-0 z-10 border-b border-line bg-black/30 backdrop-blur-md">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-5 md:px-20">
-          <a href="#home" className="font-display text-2xl font-bold">
-            {profile.shortName}
-            <span className="text-accent">.</span>
-          </a>
-          <ul className="flex gap-6 overflow-x-auto text-base md:gap-10">
-            {nav.map(([label, href]) => (
-              <li key={href}>
-                <a href={href} className="text-muted transition hover:text-accent">
-                  {label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </header>
+      <Navbar navItems={nav} />
 
       <main>
         <section
           id="home"
-          className="mx-auto flex max-w-7xl scroll-mt-24 flex-col-reverse items-center gap-14 px-6 py-24 md:flex-row md:gap-20 md:px-20 md:py-36"
+          className="mx-auto flex max-w-7xl scroll-mt-24 flex-col items-center gap-12 px-6 py-16 md:flex-row md:gap-16 md:px-20 md:py-32"
         >
           <div className="flex flex-1 flex-col items-start gap-6">
             {profile.available && (
@@ -118,19 +103,21 @@ export default function Page() {
               <a href="#contact" className={`${btn} border border-line hover:bg-surface`}>
                 Get in Touch
               </a>
-              <a href={profile.cv} download className="px-2 text-base text-muted underline-offset-4 transition hover:text-accent hover:underline">
-                Download CV
+              <a href={profile.cv} target="_blank" rel="noopener noreferrer" className="px-2 text-base text-muted underline-offset-4 transition hover:text-accent hover:underline">
+                My Resume
               </a>
             </div>
           </div>
-          <Image
-            src={profile.photo}
-            alt={`Photo of ${profile.name}`}
-            width={460}
-            height={575}
-            priority
-            className="aspect-[4/5] w-full max-w-md rounded-[2rem] border border-line bg-surface object-cover"
-          />
+          <div className="flex w-full justify-center md:w-auto">
+            <Image
+              src={profile.photo}
+              alt={`Photo of ${profile.name}`}
+              width={400}
+              height={500}
+              priority
+              className="aspect-[4/5] w-full max-w-[260px] rounded-3xl border border-line bg-surface object-cover shadow-2xl shadow-black/40 sm:max-w-[300px] md:max-w-xs lg:max-w-sm"
+            />
+          </div>
         </section>
 
         <Section id="tools" title="Skills & Technologies">

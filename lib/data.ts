@@ -14,7 +14,7 @@ export const profile = {
   about:
     "Informatics graduate with hands-on experience in designing systems, developing web application features, and delivering functional solutions focused on user needs",
   photo: "/profil1.jpeg", 
-  cv: "/cv.pdf", 
+  cv: "https://drive.google.com/file/d/1_9Un5W9-ZUChp0KY6XbyH54Lot68tFqI/view?usp=sharing", 
 };
 
 export const tools = [
