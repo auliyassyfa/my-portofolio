@@ -6,14 +6,14 @@
   --color-line: rgb(255 255 255 / 0.16);
   --color-text: #fdf2f8;
   --color-muted: #d9bfd0;
-  --color-accent: #ff8fb1; /* ganti ke #ffc94a untuk aksen kuning */
+  --color-accent: #ff8fb1; 
   --font-sans: var(--font-body), system-ui, sans-serif;
   --font-display: var(--font-heading), system-ui, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
-  font-size: 112.5%; /* 18px. Naikkan/turunkan untuk membesarkan/mengecilkan semua ukuran */
+  font-size: 112.5%; 
 }
 
 /* Gradasi magenta-maroon ke hitam */

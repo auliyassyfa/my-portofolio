@@ -234,7 +234,7 @@ export default function Page() {
       </main>
 
       <footer className="border-t border-line py-10 text-center text-base text-muted">
-        © {new Date().getFullYear()} {profile.name}
+        © 2026 {profile.name}
       </footer>
     </>
   );

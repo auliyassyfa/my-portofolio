@@ -1,6 +1,3 @@
-// All portfolio content lives here. Edit the text below; no need to touch page.tsx.
-// Remove (or comment out) demo/repo/link when you don't have one yet; the button simply won't show.
-
 export type TimelineItem = {
   period: string;
   title: string;
@@ -10,14 +7,14 @@ export type TimelineItem = {
 };
 
 export const profile = {
-  name: "Auliya Putri Assyfa",
-  shortName: "Auliyassyfa", // used in the navbar logo
-  available: true, // false hides the "Available for Opportunities" badge
+  name: "Auliyassyfa",
+  shortName: "Auliyassyfa", 
+  available: true, 
   headline: "Building Effective Digital Solutions Through Analysis and Code",
   about:
     "Informatics graduate with hands-on experience in designing systems, developing web application features, and delivering functional solutions focused on user needs",
-  photo: "/profil1.jpeg", // put your photo at public/foto.jpg
-  cv: "/cv.pdf", // put your CV at public/cv.pdf
+  photo: "/profil1.jpeg", 
+  cv: "/cv.pdf", 
 };
 
 export const tools = [
@@ -41,7 +38,7 @@ export const projects: {
   title: string;
   desc: string;
   stack: string[];
-  image?: string; // put images in public/projects/, 16:9 ratio (e.g. 1280x720)
+  image?: string; 
   demo?: string;
   repo?: string;
 }[] = [
@@ -51,7 +48,6 @@ export const projects: {
     stack: ["React.js", "Tailwind CSS", "Python", "Flask", "Gemini API"],
     image: "/projects/cv_analyzer.jpg",
     repo: "https://github.com/auliyassyfa/cv-analyzer",
-    // demo: "https://...",
   },
   {
     title: "SakuSehat",
@@ -119,7 +115,6 @@ export const education: TimelineItem[] = [
   },
 ];
 
-// Add link: "https://..." to any certificate that has a URL.
 export const certifications: { title: string; link?: string }[] = [
   { title: "Machine Learning Participant, Asah led by Dicoding" },
   { title: "Front-End & Back-End Developer Participant, DBS Foundation Coding Camp" },
